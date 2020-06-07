@@ -1,0 +1,23 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "description": "excel on JS",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jSolis73/excel-2020.git"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "jSolis73",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jSolis73/excel-2020/issues"
+  },
+  "homepage": "https://github.com/jSolis73/excel-2020#readme"
+}
