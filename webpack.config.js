@@ -5,18 +5,20 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  mode: 'production',
   entry: './index.js',
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['js'],
+    extensions: ['.js'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@core': path.resolve(__dirname, 'src/core')
     }
+  },
+  devServer: {
+    port: 3000
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -32,21 +34,27 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true,
+              reloadAll: true
+            }
+          },
           'css-loader',
           'sass-loader',
         ]
       },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
+      // { 
+      //   test: /\.js$/, 
+      //   exclude: /node_modules/, 
+      //   loader: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env']
+      //     }
+      //   } 
+      // }
     ]
   }
 
