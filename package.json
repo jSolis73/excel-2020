@@ -37,6 +37,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "strip": "^3.0.0"
   }
 }
