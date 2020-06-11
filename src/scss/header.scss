@@ -2,5 +2,50 @@
 @import './variables';
 
 .excel__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding: 8px 2px 0 8px;  
 
+  & .excel__input {
+    margin: 0;
+    padding: 2px 7px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: rgb(104, 104, 104);
+    height: 30px;
+    font-size: 25px;
+    line-height: 20px;
+    outline: none;
+
+    &:hover {
+      border: 1px solid rgb(227, 250, 144);
+    }
+
+    &:focus {
+      border: 1px solid rgb(84, 253, 84);
+      border-radius: 3px;
+    }
+
+  }
+
+  & .excel__button {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 24px;
+
+    & span:active {
+      color: red;
+      cursor: pointer;
+    }
+
+    & span:hover {
+      cursor: pointer;
+    }
+  }
 }
