@@ -32,6 +32,8 @@
       border-radius: 5px;
     }
 
+    
+
   }
 
   & .excel__button {
@@ -39,14 +41,15 @@
     position: relative;
     text-align: center;
     height: 24px;
+    margin-right: 4px;
 
     & span:active {
-      color: red;
-      cursor: pointer;
+      @include click(red)
     }
 
     & span:hover {
       cursor: pointer;
     }
   }
+
 }
