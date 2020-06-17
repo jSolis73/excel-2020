@@ -10,80 +10,43 @@
 <body>
   <div class="container" id="app">
 
-    <div class="excel">
-      
-      <div class="excel__header">
+   <div class="dash-board">
 
-        <input class="excel__input" type="text" value="Новая таблица">
+    <div class="dash-board__header">
+      <h1>Excel dashboard</h1>
+    </div>
 
-        <div>
-
-          <div class="excel__button">
-            <span class="material-icons">
-              delete
-            </span>
-          </div>
-  
-          <div class="excel__button">
-            <span class="material-icons">
-              cancel
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="excel__toolbar">
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_align_left
-          </span>
-        </div>
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_align_center
-          </span>
-        </div>
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_align_right
-          </span>
-        </div>
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_italic
-          </span>
-        </div>
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_bold
-          </span>
-        </div>
-
-        <div class="excel__button">
-          <span class="material-icons">
-            format_underlined
-          </span>
-        </div>
-
-      </div>
-
-      <div class="excel__formula">
-        <div class="formula__info"> Fx</div>
-        <div class="formula__input" contenteditable></div>
-      </div>
-
-      <div class="excel__table">
-
+    <div class="dash-board__new">
+      <div class="dash-board__view">
+        <a href="#" class="dashboard__create">
+          Новая <br> таблица
+        </a>
       </div>
 
     </div>
+
+    <div class="dash-board__table">
+
+      <div class="dash-board__list-header">
+        <span>Название таблицы</span>
+        <span>Дата открытия</span>
+      </div>
+
+      <ul class="dash-board__list">
+        
+        <li class="dash-board__record">
+          <a href="#">Таблица 1</a>
+          <strong>17.06.2020</strong>
+        </li>
+
+        <li class="dash-board__record">
+          <a href="#">Таблица 2</a>
+          <strong>17.06.2020</strong>
+        </li>
+        
+      </ul>
+
+   </div>
 
   </div>
 </body>

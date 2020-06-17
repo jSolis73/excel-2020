@@ -2,5 +2,65 @@
 @import './variables';
 
 .excel__table {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 99px;
+  overflow-x: auto;
 
+  .row {
+    display: flex;
+    flex-direction: row;
+    min-height: 20px;
+    height: $row-height;
+
+  }
+
+  .row-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: $cell-width;
+    height: 100%;
+    border: 1px solid $border-color;
+    background: rgb(206, 205, 205);
+    border-top: none;
+  }
+
+  .row-data {
+    display: flex;
+
+    .selected {
+      border: none;
+      outline: 2px solid rgb(71, 71, 255);
+      z-index: 2;
+    }
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: rgb(206, 205, 205);
+    min-width: 40px;
+    width: $cell-width;
+    border: 1px solid $border-color;
+    border-top: none;
+    border-left: none;
+  }
+
+  .cell {
+    min-width: 40px;
+    padding: 5px;
+    width: $cell-width;
+    text-align: center;
+    border: 1px solid rgb(212, 212, 212);
+    border-top: none;
+    border-left: none;
+    white-space: nowrap;
+    color: rgb(94, 94, 94);
+    outline: none;
+
+
+  }
 }
