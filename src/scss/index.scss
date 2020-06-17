@@ -1,5 +1,26 @@
-$red: yellow;
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+@import './formula.scss';
+@import './header.scss';
+@import './table.scss';
+@import './toolbar.scss';
+@import './dashboard.scss';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: $red;
+  font-family: 'Nunito', sans-serif;
+}
+
+.excel {
+  position: relative;
+  height: 100%;
+  min-width: 100%;
+  font-size: 0.8rem;
 }
